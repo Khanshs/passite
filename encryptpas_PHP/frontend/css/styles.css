@@ -1,0 +1,89 @@
+/* Basic modern, clean styles */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  color: #1f2937;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffffcc;
+  backdrop-filter: blur(6px);
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+.form { display: grid; gap: 14px; }
+.field { display: grid; gap: 6px; }
+label { font-weight: 600; font-size: 14px; }
+input[type="text"], input[type="password"] {
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.15);
+}
+
+.btn {
+  margin-top: 6px;
+  padding: 12px 14px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { background: #5457ee; }
+.btn:active { transform: translateY(1px); }
+
+.result {
+  margin-top: 18px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+}
+.result pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 13px;
+}
+
+.muted { color: #6b7280; }
+.links { margin-top: 16px; }
+.links a { color: #2563eb; text-decoration: none; }
+.links a:hover { text-decoration: underline; }
+
+@media (prefers-color-scheme: dark) {
+  body { color: #e5e7eb; background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%); }
+  .card { background: #0b1220cc; border-color: #1f2937; }
+  input[type="text"], input[type="password"] { background: #0f172a; color: #e5e7eb; border-color: #334155; }
+  .result { background: #0f172a; border-color: #1f2937; }
+}
+
+
